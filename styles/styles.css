@@ -197,7 +197,7 @@ nav ul a:hover {
 }
 /* End Page Button */
 
-.toggleMenu {
+.toggleMenu, .testimonial-cards::-webkit-scrollbar, .t-card-content, .show, .d-none {
   display: none;
 }
 /* End Navigation */
@@ -258,8 +258,8 @@ h1 {
 /* End Hero Section */
 
 /* About Section */
-#about {
-  padding: var(--gap--2--);
+#about, .beauty, .meet {
+  padding: var(--gap--2--) 0;
 }
 
 /* Heading */
@@ -320,7 +320,7 @@ p {
   line-height: 155%;
 }
 
-.about-content .page-btn {
+.about-content .page-btn, .beauty-content .page-btn {
   margin-top: var(--gap--1--)
 }
 
@@ -331,6 +331,8 @@ p {
   -webkit-filter: drop-shadow(0 1rem 3rem var(--cl--3--));
 }
 /* End About Section */
+
+/* Products Section */
 .product {
   flex-wrap: wrap;
   justify-content: center;
@@ -389,13 +391,284 @@ h4 {
 .hexagon:hover h4 {
   opacity: 1;
 }
-
-/* Products Section */
-
 /* End Products Section */
 
+/* Shop Section */
+.shop {
+  overflow: hidden;
+  padding: var(--gap--2--) 0;
+}
+
+.shop .mySwiper {
+  max-width: 950px;
+  margin: var(--gap--1--) auto 0;
+  overflow: visible;
+}
+
+.shop .swiper-slide {
+  align-items: center;
+  padding: var(--gap--1--);
+  background: rgba(255, 186, 65, 0.07);
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.shop .swiper-slide.swiper-slide-active {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
+
+.shop-img {
+  text-align: center;
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+.shop-img img {
+  height: 200px;
+  object-fit: contain;
+}
+
+.shop-img p {
+  text-transform: capitalize;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.shop-content p+p {
+  margin-top: 1rem;
+}
+
+strong {
+  font-weight: 500;
+  color: var(--cl--3--);
+}
+
+.shop-details {
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.shop-detail {
+  gap: 1rem;
+}
+
+.s-d-img img {
+  width: 150px;
+  height: 150px;
+}
+
+.s-d-img img, .shop-detail p+p {
+  margin-top: 0.5rem;
+}
+
+.shop-detail hr {
+  height: 100%;
+  width: 4px;
+}
+
+.shop-detail hr+div {
+  width: 100%;
+}
+
+.shop-details .page-btn.active {
+  align-self: flex-end;
+  padding: 1.5rem 1.125rem;
+  margin-left: auto;
+}
+
+.swiper-pagination {
+  position: relative;
+  inset: unset !important;
+  margin-top: var(--gap--1--);
+}
+
+.swiper-pagination-bullet {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  width: clamp(0.63rem, 2.45vw + 0.17rem, 2.19rem);
+  height: clamp(0.63rem, 2.45vw + 0.17rem, 2.19rem);
+  background: rgba(242, 187, 90, 0.9);
+  border-radius: unset;
+  -webkit-border-radius: unset;
+  -moz-border-radius: unset;
+  -ms-border-radius: unset;
+  -o-border-radius: unset;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--cl--3--);
+}
+/* End Shop Section */
+
+/* Gallery Section */
+.gallery-slider {
+  padding: var(--gap--1--);
+  overflow: hidden;
+}
+
+.gallery-slider :is(.mySwiper, .mySwiper2) {
+  overflow: visible;
+}
+
+.gallery-slider img {
+  height: 400px;
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+/* End Gallery Section */
+
+/* Beauty Section */
+.beauty .flex {
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  margin-top: var(--gap--1--);
+}
+
+.beauty-img img {
+  max-height: 400px;
+  object-fit: contain;
+  filter: drop-shadow(0 0.5rem 1rem var(--cl--2--));
+  -webkit-filter: drop-shadow(0 0.5rem 1rem var(--cl--2--));
+}
+/* End Beauty Section */
+
+/* Testimonial Section */
+.stars img {
+  width: 30px;
+}
+
+.testimonial .heading {
+  margin-bottom: var(--gap--1--);
+}
+
+.testimonial-cards {
+  gap: 1rem;
+  max-width: max-content;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.testimonial-card {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* background-image: url(../assets/tbg.png); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 1rem;
+  min-width: 215px;
+  min-height: 240px;
+}
+
+.testimonial-card:hover:not(.show) {
+  min-width: 661px;
+  /* background-image: url(../assets/tbg.png); */
+}
+
+.t-card-img {
+  overflow: hidden;
+  padding: 0.25rem;
+  /* background-image: url(../assets/tbg.png); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.testimonial-card img {
+  object-fit: cover;
+  width: 175px;
+  height: 200px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.testimonial-card:hover .t-card-content{
+  display: block;
+  width: 430px;
+}
+
+.t-card-content p {
+  font-size: 0.85rem;
+}
+
+.rate {
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stars {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars img {
+  max-width: 15px;
+  max-height: 15px;
+  object-fit: contain;
+}
+/* End Testimonial Section */
+
+/* Meet Section */
+.meet .flex {
+  margin-top: var(--gap--1--);
+  flex-wrap: wrap-reverse;
+  align-items: center;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: var(--h3--);
+  text-transform: capitalize;
+}
+
+.video {
+  position: relative;
+}
+
+.video video, .video-thumbnail img {
+  border: 5px solid var(--cl--3--);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.video-thumbnail {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.video-thumbnail::after {
+  cursor: pointer;
+  position: absolute;
+  content: "";
+  inset: 0;
+  margin: auto;
+  width: 85px;
+  height: 85px;
+  background-image: url(../assets/play.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* End Meet Section */
+
 /* Media */
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .container {
     max-width: 1320px;
   }
@@ -478,6 +751,26 @@ h4 {
   .hexagon:nth-of-type(6),
   .hexagon:nth-of-type(7) {
     margin-top: -35px;
+  }
+
+  .gallery-slider .mySwiper2 {
+    margin-top: -5rem;
+  }
+
+  .testimonial-cards {
+    justify-content: center;
+  }
+
+  .testimonial-cards+.testimonial-cards {
+    margin-top: -2.5rem;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .meet-content {
+    max-width: 500px;
   }
 }
 /* End Media */
